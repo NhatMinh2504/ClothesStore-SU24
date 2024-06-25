@@ -4,10 +4,24 @@
  */
 package dal.dal.implement;
 
+import dal.GenericDAO;
+import entity.Product;
+import java.util.List;
+
 /**
  *
  * @author DELL
  */
-public class ProductDAO {
-    
+public class ProductDAO extends GenericDAO<Product> {
+
+    @Override
+    public List<Product> findAll() {
+        return queryGenericDAO();
+    }
+
+    @Override
+    public int insert(Product t) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+   
 }

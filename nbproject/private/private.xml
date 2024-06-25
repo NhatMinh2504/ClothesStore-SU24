@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="csd201">
-            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/dal/GenericDAO.java</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/Page%20navigation.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/home.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/header-middle%20sticky-header.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/header-top.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/sidebar%20sidebar-shop.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/dal/DBContext.java</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/footer.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/toolbox.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/breadcrumb.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/products%20mb-3.jsp</file>
-        </group>
+        <group name="csd201"/>
     </open-files>
 </project-private>
