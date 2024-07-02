@@ -47,7 +47,7 @@
                                     <li><a href="shop.html">Jackets</a></li>
                                 </ul>
                             </li>
-                            <li><a href="product-details.html">Audio books</a>
+                            <li><a href="product-details.html">Audio Clothes</a>
                                 <ul>
                                     <li><a href="shop.html">Tops & Tees</a></li>
                                     <li><a href="shop.html">Sweaters</a></li>
@@ -67,7 +67,7 @@
                                     <li><a href="shop.html">Hoodies</a></li>
                                 </ul>
                             </li>
-                            <li><a href="product-details.html">children’s books</a>
+                            <li><a href="product-details.html">children’s Clothes</a>
                                 <ul>
                                     <li><a href="shop.html">Shirts</a></li>
                                     <li><a href="shop.html">Florals</a></li>

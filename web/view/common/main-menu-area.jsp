@@ -26,18 +26,18 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="product-details.html">Book<i class="fa fa-angle-down"></i></a>
+                            <li><a href="product-details.html">Clothes<i class="fa fa-angle-down"></i></a>
                                 <div class="mega-menu">
                                     <span>
-                                        <a href="#" class="title">Jackets</a>
-                                        <a href="shop.html">Tops & Tees</a>
+                                        <a href="#" class="title">Short</a>
+                                        <a href="shop.html">Tops</a>
                                         <a href="shop.html">Polo Short Sleeve</a>
-                                        <a href="shop.html">Graphic T-Shirts</a>
-                                        <a href="shop.html">Jackets & Coats</a>
-                                        <a href="shop.html">Fashion Jackets</a>
+                                        <a href="shop.html">Graphic Short</a>
+                                        <a href="shop.html">Basic Short</a>
+                                        <a href="shop.html">Jean short</a>
                                     </span>
                                     <span>
-                                        <a href="#" class="title">weaters</a>
+                                        <a href="#" class="title">Shirt</a>
                                         <a href="shop.html">Crochet</a>
                                         <a href="shop.html">Sleeveless</a>
                                         <a href="shop.html">Stripes</a>
@@ -45,7 +45,7 @@
                                         <a href="shop.html">hoodies</a>
                                     </span>
                                     <span>
-                                        <a href="#" class="title">Bottoms</a>
+                                        <a href="#" class="title">Dress</a>
                                         <a href="shop.html">Heeled sandals</a>
                                         <a href="shop.html">Polo Short Sleeve</a>
                                         <a href="shop.html">Flat sandals</a>
@@ -53,7 +53,7 @@
                                         <a href="shop.html">Long Sleeve</a>
                                     </span>
                                     <span>
-                                        <a href="#" class="title">Jeans Pants</a>
+                                        <a href="#" class="title">Jeans </a>
                                         <a href="shop.html">Polo Short Sleeve</a>
                                         <a href="shop.html">Sleeveless</a>
                                         <a href="shop.html">Graphic T-Shirts</a>
@@ -62,7 +62,7 @@
                                     </span>
                                 </div>
                             </li>
-                            <li><a href="product-details.html">Audio books<i class="fa fa-angle-down"></i></a>
+                            <li><a href="product-details.html">Audio Clothes<i class="fa fa-angle-down"></i></a>
                                 <div class="mega-menu">
                                     <span>
                                         <a href="#" class="title">Shirts</a>
@@ -94,7 +94,7 @@
                                     </span>
                                 </div>
                             </li>
-                            <li><a href="product-details.html">children’s books<i class="fa fa-angle-down"></i></a>
+                            <li><a href="product-details.html">children’s clothes<i class="fa fa-angle-down"></i></a>
                                 <div class="mega-menu mega-menu-2">
                                     <span>
                                         <a href="#" class="title">Tops</a>
