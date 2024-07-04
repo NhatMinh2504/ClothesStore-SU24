@@ -12,10 +12,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- *
- * @author DELL
- */
 @ToString
 @Builder
 @Data
@@ -26,4 +22,5 @@ import lombok.ToString;
 public class Category {
     private int id;
     private String name;
+    
 }

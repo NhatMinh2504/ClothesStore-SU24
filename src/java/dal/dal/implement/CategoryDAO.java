@@ -10,13 +10,13 @@ import java.util.List;
 
 /**
  *
- * @author DELL
+ * @author ADMIN
  */
-public class CategoryDAO extends GenericDAO<Category> {
+public class CategoryDAO extends GenericDAO<Category>{
 
     @Override
     public List<Category> findAll() {
-        return queryGenericDAO();
+        return queryGenericDAO(Category.class);
     }
 
     @Override

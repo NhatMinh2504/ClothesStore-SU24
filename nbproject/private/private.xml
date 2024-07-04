@@ -3,21 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="csd201">
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/header-mid-area.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/breadcrumbs-area.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/main-menu-area.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/header_top_area.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/entity/Product.java</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/controller/ProductDetailController.java</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/controller/HomeController.java</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/common.admin/footer.jsp</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/common.admin/sideBar.jsp</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/common.admin/breedcrumbs.jsp</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/admin/deleteProductModal.jsp</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/controller/admin/DashboardServlet.java</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/common.admin/iconCard.jsp</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/common.admin/navbar.jsp</file>
             <file>file:/C:/Users/DELL/javaWeb/Store/src/java/dal/GenericDAO.java</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/mobile-menu-area.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/homepage/productdetails.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/dal/DBContext.java</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/admin/addProductModal.jsp</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/common/common.admin/logoutModal.jsp</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/controller/admin/ProductAdminServlet.java</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/admin/editProductModal.jsp</file>
+            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/admin/dashboard.jsp</file>
             <file>file:/C:/Users/DELL/javaWeb/Store/src/java/dal/dal/implement/ProductDAO.java</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/web/view/homepage/home.jsp</file>
-            <file>file:/C:/Users/DELL/javaWeb/Store/src/java/dal/dal/implement/CategoryDAO.java</file>
         </group>
     </open-files>
 </project-private>

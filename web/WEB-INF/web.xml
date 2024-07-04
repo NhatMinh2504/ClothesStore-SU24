@@ -2,11 +2,19 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>HomeController</servlet-name>
-        <servlet-class>controller.HomeController</servlet-class>
+        <servlet-class>controller.homepage.HomeController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ProductDetailController</servlet-name>
         <servlet-class>controller.ProductDetailController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>controller.admin.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductAdminServlet</servlet-name>
+        <servlet-class>controller.admin.ProductAdminServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HomeController</servlet-name>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>ProductDetailController</servlet-name>
         <url-pattern>/productdetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/admin/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductAdminServlet</servlet-name>
+        <url-pattern>/admin/product</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
