@@ -119,6 +119,22 @@ public class ProductDAO extends GenericDAO<Product> {
     }
 
     public void update(Product product) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String sql = "UPDATE [dbo].[Product]\n"
+                + "   SET [name] = ?\n"
+                + "      ,[image] = ?\n"
+                + "      ,[quantity] = ?\n"
+                + "      ,[price] = ?\n"
+                + "      ,[description] = ?\n"
+                + "      ,[categoryId] = ?\n"
+                + " WHERE id= ?";
+        parameterMap = new LinkedHashMap<>();
+        parameterMap.put("name", product.getName());
+        parameterMap.put("image", product.getImage());
+        parameterMap.put("quantity", product.getQuantity());
+        parameterMap.put("price", product.getPrice());
+        parameterMap.put("description", product.getDescription());
+        parameterMap.put("categoryId", product.getCategoryId());
+        parameterMap.put("id", product.getId());
+        updateGenericDAO(sql,parameterMap);
     }
 }

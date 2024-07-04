@@ -36,7 +36,7 @@
                     <ul>
                         <li><a href="my-account.html">My Account</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="login.html">Sign in</a></li>
+                        <li><a href="authen?action=login">Sign in</a></li>
                     </ul>
                 </div>
             </div>
