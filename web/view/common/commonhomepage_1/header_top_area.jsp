@@ -36,14 +36,23 @@
                 <div class="account-area text-end">
                     <ul>
                         <c:if test="${account !=null}">
-                        <li><a href="my-account.html">My Account</a></li>
+                            <!--nguoi dung-->
+                            <c:if test="${account.roleId==2}">
+                        <li><a href="${pageContext.request.contextPath}/dashboard">My Account</a></li>
+                        </c:if>
+                        <!--admin-->
+                         <c:if test="${account !=null}">
+                            <!--nguoi dung-->
+                            <c:if test="${account.roleId==1}">
+                        <li><a href="${pageContext.request.contextPath}admin/dashboard">My Account</a></li>
                         </c:if>
                         <li><a href="checkout.html">Checkout</a></li>
                         <c:if test="${account==null}">
                         <li><a href="authen?action=login">Sign in</a></li>
+                        <li><a href="authen?action=sign-up">Sign up</a></li>
                         </c:if>
                         <c:if test="${account!=null}">
-                        <li><a href="authen?action=log-out">Sign out</a></li>
+                        <li><a href="${pageContext.request.contextPath}/authen?action=log-out">Sign out</a></li>
                         </c:if>
                     </ul>
                 </div>

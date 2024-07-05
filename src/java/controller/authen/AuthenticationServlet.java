@@ -69,7 +69,9 @@ public class AuthenticationServlet extends HttpServlet {
             case "login":
                url= loginDoPost(request,response);
                 break;
-            
+            case "sign-up":
+                url=signUp(request,response);
+                break;
                 
             default:
                 url="home";
@@ -112,6 +114,30 @@ public class AuthenticationServlet extends HttpServlet {
     private String logOut(HttpServletRequest request, HttpServletResponse response) {
         request.getSession().removeAttribute(CommonConst.SESSION_Account);
         return "home";
+    }
+
+    private String signUp(HttpServletRequest request, HttpServletResponse response) {
+        String url;
+        //get ve thong tin
+        String username=request.getParameter("username");
+        String password=request.getParameter("password");
+        
+        //kiem tra da bi trung 
+        Account account=Account.builder()
+                        .username(username)
+                .password(password)
+                        .build();
+        boolean isExistUsername=accountDAO.checkUsernameExist(account);
+        
+        //true
+        if(isExistUsername){
+            request.setAttribute("error", "Username exist");
+            url="view/authen/register.jsp";
+        }else{
+            accountDAO.insert(account);
+            url="home";
+        }
+        return url;
     }
 
 }
