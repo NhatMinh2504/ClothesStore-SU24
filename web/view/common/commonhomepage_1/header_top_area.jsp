@@ -4,6 +4,7 @@
     Author     : DELL
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <div class="header-top-area">
@@ -34,9 +35,16 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="account-area text-end">
                     <ul>
+                        <c:if test="${account !=null}">
                         <li><a href="my-account.html">My Account</a></li>
+                        </c:if>
                         <li><a href="checkout.html">Checkout</a></li>
+                        <c:if test="${account==null}">
                         <li><a href="authen?action=login">Sign in</a></li>
+                        </c:if>
+                        <c:if test="${account!=null}">
+                        <li><a href="authen?action=log-out">Sign out</a></li>
+                        </c:if>
                     </ul>
                 </div>
             </div>

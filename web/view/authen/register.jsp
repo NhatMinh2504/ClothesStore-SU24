@@ -1,12 +1,15 @@
 <%-- 
-    Author     : 4USER-FPT
+    Document   : register
+    Created on : Jul 5, 2024, 1:45:52 PM
+    Author     : DELL
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html class="no-js" lang="en">
 
-    <!-- Mirrored from htmldemo.net/koparion/koparion/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Feb 2024 17:30:39 GMT -->
+
+    <!-- Mirrored from htmldemo.net/koparion/koparion/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Feb 2024 17:30:57 GMT -->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,7 +29,6 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/meanmenu.min.css">
         <!-- owl.carousel css -->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.css">
-        <!-- font-awesome css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
               integrity="sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg=="
               crossorigin="anonymous"
@@ -42,7 +44,8 @@
         <!-- modernizr css -->
         <script src="${pageContext.request.contextPath}/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body class="login">
+
+    <body class="register">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -57,60 +60,55 @@
             <jsp:include page="../common/commonhomepage_1/header-mid-area.jsp"></jsp:include>
                 <!-- header-mid-area-end -->
                 <!-- main-menu-area-start -->
-            <jsp:include page="../common/common.login/main-menu-area.jsp"></jsp:include>
+            <jsp:include page="../common/commonhomepage_1/main-menu-area.jsp"></jsp:include>
                 <!-- main-menu-area-end -->
                 <!-- mobile-menu-area-start -->
-            <jsp:include page="../common/common.login/mobile-menu-area.jsp"></jsp:include>
+            <jsp:include page="../common/commonhomepage_1/mobile-menu-area.jsp"></jsp:include>
                 <!-- mobile-menu-area-end -->
             </header>
             <!-- header-area-end -->
             <!-- breadcrumbs-area-start -->
-            <jsp:include page="../common/common.login/breedcrumbs-area.jsp"></jsp:include>
-            <!-- breadcrumbs-area-end -->
-            <!-- user-login-area-start -->
-            <div class="user-login-area mb-70">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="login-title text-center mb-30">
-                                <h2>Login</h2>
-                            </div>
+            <jsp:include page="../common/commonhomepage_1/breadcrumbs-area.jsp"></jsp:include>
+        <!-- breadcrumbs-area-end -->
+        <!-- user-login-area-start -->
+        <div class="user-login-area mb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="login-title text-center mb-30">
+                            <h2>Sign Up</h2>
+                            <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo<br>inventore veritatis et quasi architecto beat</p>
                         </div>
-                        <div class="offset-lg-3 col-lg-6 col-md-12 col-12">
-                            <div class="login-form">
-                                <form action="authen?action=login" method="POST">
-                                <div class="single-login">
-                                    <label>Username or email<span>*</span></label>
-                                    <input type="text" name="username" />
-                                </div>
-                                <div class="single-login">
-                                    <label>Passwords <span>*</span></label>
-                                    <input type="password" name="password" />
-                                </div>
-                                <div class="single-login single-login-2">
-                                    <a href="#" onclick="return this.closest('form').submit()">Login</a>
-                                    <input id="rememberme" type="checkbox" name="rememberme" value="forever">
-                                    <span>Remember me</span>
-                                </div>
-                                <a href="#">Lost your password?</a>
-                                <div>
+                    </div>
+                    <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+                        <div class="billing-fields">
+                            <div class="single-register">
+                                <form action="authen?action=sign-up" method="POST" id="signUpForm">
+                                    <label>Account password<span>*</span></label>
+                                    <input type="text" placeholder="Username" name="username" />
+                                    <br/>
+                                    <label>Password<span>*</span></label>
+                                    <input type="password" placeholder="Password" name="password" />
                                     <span style="color:red">${error}</span>
-                                </div>
                                 </form>
+                            </div>
+                            <div class="single-register">
+                                <a href="#" onclick="document.querySelector('#signUpForm').submit()">Register</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- user-login-area-end -->
-            <!-- footer-area-start -->
-        <jsp:include page="../common/common.login/footer.jsp"></jsp:include>
-            <!-- footer- area-end -->
+        </div>
+        <!-- user-login-area-end -->
+        <!-- footer-area-start -->
+            <jsp:include page="../common/commonhomepage_1/footer.jsp"></jsp:include>
+        <!-- footer-area-end -->
 
 
-            <!-- all js here -->
-            <!-- jquery latest version -->
-            <script src="${pageContext.request.contextPath}/js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- all js here -->
+        <!-- jquery latest version -->
+        <script src="${pageContext.request.contextPath}/js/vendor/jquery-1.12.4.min.js"></script>
 
 
         <!-- bootstrap js -->
@@ -139,5 +137,6 @@
         <script src="${pageContext.request.contextPath}/js/main.js"></script>
     </body>
 
-    <!-- Mirrored from htmldemo.net/koparion/koparion/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Feb 2024 17:30:39 GMT -->
+
+    <!-- Mirrored from htmldemo.net/koparion/koparion/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Feb 2024 17:30:57 GMT -->
 </html>

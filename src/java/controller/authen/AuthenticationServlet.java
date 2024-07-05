@@ -5,19 +5,23 @@
 
 package controller.authen;
 
+import constant.CommonConst;
+import dal.dal.implement.AccountDAO;
+import entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author DELL
  */
 public class AuthenticationServlet extends HttpServlet {
-   
+   AccountDAO accountDAO=new AccountDAO();
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -33,6 +37,11 @@ public class AuthenticationServlet extends HttpServlet {
             case "login":
                 url="view/authen/login.jsp";
                 break;
+            case "log-out":
+                url=logOut(request,response);
+                break;
+            case "sign-up"    :
+                url="view/authen/register.jsp";
             default:
                 url="home";
         }
@@ -60,6 +69,8 @@ public class AuthenticationServlet extends HttpServlet {
             case "login":
                url= loginDoPost(request,response);
                 break;
+            
+                
             default:
                 url="home";
         }
@@ -76,12 +87,31 @@ public class AuthenticationServlet extends HttpServlet {
 
     private String loginDoPost(HttpServletRequest request, HttpServletResponse response) {
         //get ve thong tin nguoi dung
+        String url=null;
+        String username=request.getParameter("username");
+        String password=request.getParameter("password");
         
         //kiem tra ton tai trong db khong
-        
+        Account account=Account.builder()
+                        .username(username)
+                        .password(password)
+                        .build();
+        Account accFoundByUsernamePass =accountDAO.findByUsernameAndPass(account);
         //true=>home(set account vao session)
-        
+        if(accFoundByUsernamePass!=null){
+           request.getSession().setAttribute(CommonConst.SESSION_Account, accFoundByUsernamePass);
+           url="home";
+        }else{
+            request.setAttribute("error", "User name or password incorect");
+            url="view/authen/login.jsp";
+        }
         //falsse=>quay login
+        return url;
+    }
+
+    private String logOut(HttpServletRequest request, HttpServletResponse response) {
+        request.getSession().removeAttribute(CommonConst.SESSION_Account);
+        return "home";
     }
 
 }

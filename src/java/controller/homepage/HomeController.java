@@ -8,8 +8,6 @@ import constant.CommonConst;
 import dal.dal.implement.CategoryDAO;
 import dal.dal.implement.ProductDAO;
 
-
-
 import entity.Category;
 import entity.PageControl;
 import entity.Product;
