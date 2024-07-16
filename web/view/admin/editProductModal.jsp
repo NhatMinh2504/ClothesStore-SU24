@@ -1,8 +1,4 @@
-<%-- 
-    Document   : editProductModal
-    Created on : Jul 4, 2024, 9:38:19 PM
-    Author     : DELL
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

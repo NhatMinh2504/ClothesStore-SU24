@@ -8,8 +8,6 @@ import constant.CommonConst;
 import dal.dal.implement.CategoryDAO;
 import dal.dal.implement.ProductDAO;
 
-
-
 import entity.Category;
 import entity.Product;
 import java.io.IOException;
@@ -43,7 +41,7 @@ public class DashboardServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-             {
+            throws ServletException, IOException {
     }
 
 }

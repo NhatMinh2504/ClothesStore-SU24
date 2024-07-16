@@ -1,3 +1,8 @@
+<%-- 
+    Document   : navbar
+    Created on : Jul 6, 2024, 3:32:28 PM
+    Author     : DELL
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">

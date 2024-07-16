@@ -1,3 +1,8 @@
+<%-- 
+    Document   : logoutModal
+    Created on : Jul 6, 2024, 3:32:18 PM
+    Author     : DELL
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -18,3 +23,4 @@
         </div>
     </div>
 </div>
+

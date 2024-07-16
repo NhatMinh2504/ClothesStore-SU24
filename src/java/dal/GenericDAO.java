@@ -13,7 +13,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 /**
@@ -367,6 +369,14 @@ public abstract class GenericDAO<T> extends DBContext {
         Class<?> fieldType = field.getType();
         String fieldName = field.getName();
 
+        // Kiểm tra xem fieldType có phải là một collection (như List, Set, ...) hay không
+        if (Collection.class.isAssignableFrom(fieldType)) {
+            return null; // Bỏ qua và không xử lý gì nữa
+        } // Kiểm tra xem fieldType có phải là một Map hay không
+        else if (Map.class.isAssignableFrom(fieldType)) {
+            return null; // Bỏ qua và không xử lý gì nữa
+        }
+        
         // Kiểm tra kiểu dữ liệu và convert sang đúng kiểu
         if (fieldType == String.class) {
             return rs.getString(fieldName);
@@ -380,18 +390,22 @@ public abstract class GenericDAO<T> extends DBContext {
             return rs.getBoolean(fieldName);
         } else if (fieldType == float.class || fieldType == Float.class) {
             return rs.getFloat(fieldName);
-        } else if (fieldType == Date.class || fieldType == Date.class) {
-            return rs.getDate(fieldName);
-        } else if (fieldType == Character.class || fieldType == char.class) {
-            return rs.getString(fieldName);
-        } else if (fieldType == Character.class || fieldType == char.class ) {
-            String s = rs.getString(fieldName);
-            return s.charAt(0);
-        }
-        else {
+        } else if ( fieldType == Timestamp.class) {
+            return rs.getTimestamp(fieldName);
+        } else {
             return rs.getObject(fieldName);
         }
     }
+
+    /**
+     * Hàm này sử dụng để update thông tin của một đối tượng trong Database.Hãy
+     * nhớ rằng hàm này không update ID vì mặc định các bảng sẽ để ID tự động
+     * tăng
+     *
+     * @param sql
+     * @param parameterMap: hashmap chứa các parameter
+     * @return true: update thành công | false: update thất bại
+     */
     protected boolean updateGenericDAO(String sql, Map<String, Object> parameterMap) {
 
         List<Object> parameters = new ArrayList<>();
@@ -953,6 +967,73 @@ protected boolean deleteGenericDAO(String sql, Map<String, Object> parameterMap)
         // Trả về ID được tạo tự động (nếu có)
         return id;
     }
+    
+    protected int insertGenericDAO(String sql, Map<String, Object> parameterMap) {
+        List<Object> parameters = new ArrayList<>();
+
+        for (Map.Entry<String, Object> entry : parameterMap.entrySet()) {
+            Object conditionValue = entry.getValue();
+
+            parameters.add(conditionValue);
+        }
+
+      
+        int id = 0;
+        try {
+            // Bắt đầu giao dịch và chuẩn bị câu truy vấn
+            connection.setAutoCommit(false);
+            statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+            int index = 1;
+            for (Object value : parameters) {
+                statement.setObject(index, value);
+                index++;
+            }
+
+            // Thực thi câu truy vấn
+            statement.executeUpdate();
+
+            // Lấy khóa chính (ID) được tạo tự động
+            resultSet = statement.getGeneratedKeys();
+            if (resultSet.next()) {
+                id = resultSet.getInt(1);
+            }
+            // Xác nhận giao dịch thành công
+            connection.commit();
+        } catch (SQLException e) {
+            try {
+                System.err.println("4USER: Bắn Exception ở hàm insert: " + e.getMessage());
+                // Hoàn tác giao dịch nếu xảy ra lỗi
+                connection.rollback();
+            } catch (SQLException ex) {
+                System.err.println("4USER: Bắn Exception ở hàm insert: " + ex.getMessage());
+            }
+        } finally {
+            // Đảm bảo đóng kết nối và tài nguyên
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+                if (statement != null) {
+                    statement.close();
+                }
+                if (resultSet != null) {
+                    resultSet.close();
+                }
+            } catch (SQLException e) {
+                System.err.println("4USER: Bắn Exception ở hàm insert: " + e.getMessage());
+            }
+        }
+        // Trả về ID được tạo tự động (nếu có)
+        return id;
+    }
+
+    /**
+     * Tìm số lượng record của 1 bảng nào đó
+     *
+     * @param clazz: bảng muốn tìm
+     * @return số lượng record
+     */
     protected int findTotalRecordGenericDAO(Class<T> clazz, String sql, Map<String, Object> parameterMap) {
         int total = 0;
         try {

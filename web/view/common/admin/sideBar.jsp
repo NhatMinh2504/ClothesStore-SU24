@@ -1,3 +1,8 @@
+<%-- 
+    Document   : sideBar
+    Created on : Jul 6, 2024, 3:32:34 PM
+    Author     : DELL
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <ul class="sidebar navbar-nav">
@@ -35,3 +40,4 @@
             <span>Tables</span></a>
     </li>
 </ul>
+

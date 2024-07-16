@@ -62,7 +62,7 @@
             </header>
             <!-- header-area-end -->
             <!-- breadcrumbs-area-start -->
-            <jsp:include page="../common/homepage/breadcrumbs.jsp"></jsp:include>
+        <jsp:include page="../common/homepage/breadcrumbs-area.jsp"></jsp:include>
             <!-- breadcrumbs-area-end -->
             <!-- shop-main-area-start -->
             <div class="shop-main-area mb-70">

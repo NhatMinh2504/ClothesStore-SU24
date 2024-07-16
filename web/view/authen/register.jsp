@@ -1,7 +1,5 @@
 <%-- 
-    Document   : register
-    Created on : Jul 5, 2024, 1:45:52 PM
-    Author     : DELL
+    Author     : 4USER-FPT
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -54,21 +52,21 @@
         <!-- header-area-start -->
         <header>
             <!-- header-top-area-start -->
-            <jsp:include page="../common/commonhomepage_1/header_top_area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/header-top-area.jsp"></jsp:include>
                 <!-- header-top-area-end -->
                 <!-- header-mid-area-start -->
-            <jsp:include page="../common/commonhomepage_1/header-mid-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/header-mid-area.jsp"></jsp:include>
                 <!-- header-mid-area-end -->
                 <!-- main-menu-area-start -->
-            <jsp:include page="../common/commonhomepage_1/main-menu-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/main-menu-area.jsp"></jsp:include>
                 <!-- main-menu-area-end -->
                 <!-- mobile-menu-area-start -->
-            <jsp:include page="../common/commonhomepage_1/mobile-menu-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/mobile-menu-area.jsp"></jsp:include>
                 <!-- mobile-menu-area-end -->
             </header>
             <!-- header-area-end -->
             <!-- breadcrumbs-area-start -->
-            <jsp:include page="../common/commonhomepage_1/breadcrumbs-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/breadcrumbs.jsp"></jsp:include>
         <!-- breadcrumbs-area-end -->
         <!-- user-login-area-start -->
         <div class="user-login-area mb-70">
@@ -85,15 +83,18 @@
                             <div class="single-register">
                                 <form action="authen?action=sign-up" method="POST" id="signUpForm">
                                     <label>Account password<span>*</span></label>
-                                    <input type="text" placeholder="Username" name="username" />
+                                    <input type="text" placeholder="Username" name="username"/>
                                     <br/>
                                     <label>Password<span>*</span></label>
                                     <input type="password" placeholder="Password" name="password" />
+                                    <br/>
                                     <span style="color:red">${error}</span>
                                 </form>
                             </div>
+                            
                             <div class="single-register">
-                                <a href="#" onclick="document.querySelector('#signUpForm').submit()">Register</a>
+                                <a href="#"
+                                   onclick="document.querySelector('#signUpForm').submit()">Register</a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +103,7 @@
         </div>
         <!-- user-login-area-end -->
         <!-- footer-area-start -->
-            <jsp:include page="../common/commonhomepage_1/footer.jsp"></jsp:include>
+        <jsp:include page="../common/homepage/footer.jsp"></jsp:include>
         <!-- footer-area-end -->
 
 

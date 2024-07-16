@@ -37,22 +37,22 @@
     <body id="page-top">
 
         <!--Navbar-->
-        <jsp:include page="../common/common.admin/navbar.jsp"></jsp:include>
+        <jsp:include page="../common/admin/navbar.jsp"></jsp:include>
 
             <div id="wrapper">
 
                 <!-- Sidebar -->
-            <jsp:include page="../common/common.admin/sideBar.jsp"></jsp:include>
+            <jsp:include page="../common/admin/sideBar.jsp"></jsp:include>
 
                 <div id="content-wrapper">
 
                     <div class="container-fluid">
 
                         <!-- Breadcrumbs-->
-                    <jsp:include page="../common/common.admin/breedcrumbs.jsp"></jsp:include>
+                    <jsp:include page="../common/admin/breeacrumbs.jsp"></jsp:include>
 
                         <!-- Icon Cards-->
-                    <jsp:include page="../common/common.admin/iconCard.jsp"></jsp:include>
+                    <jsp:include page="../common/admin/iconCard.jsp"></jsp:include>
 
 
 
@@ -121,7 +121,7 @@
                 <!-- /.container-fluid -->
 
                 <!-- Sticky Footer -->
-                    <jsp:include page="../common/common.admin/footer.jsp"></jsp:include>
+                    <jsp:include page="../common/admin/footer.jsp"></jsp:include>
 
                 </div>
                 <!-- /.content-wrapper -->
@@ -135,13 +135,12 @@
             </a>
 
             <!-- Logout Modal-->
-                    <jsp:include page="../common/common.admin/logoutModal.jsp"></jsp:include>
+                    <jsp:include page="../common/admin/logoutModal.jsp"></jsp:include>
         
                     <jsp:include page="addProductModal.jsp"></jsp:include>
                     <jsp:include page="deleteProductModal.jsp"></jsp:include>
         <jsp:include page="editProductModal.jsp"></jsp:include>
-
-            <!-- Bootstrap core JavaScript-->
+  <!-- Bootstrap core JavaScript-->
             <script src="${pageContext.request.contextPath}/vendor-admin/jquery/jquery.min.js"></script>
         <script src="${pageContext.request.contextPath}/vendor-admin/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -163,6 +162,7 @@
         <script src="${pageContext.request.contextPath}/js/admin/demo/chart-area-demo.js"></script>
         <script src="${pageContext.request.contextPath}/js/admin/colReorder-dataTables-min.js"></script>
         <script src="${pageContext.request.contextPath}/js/admin/colReorder-bootstrap4-min.js"></script>
+
 
 
     </body>

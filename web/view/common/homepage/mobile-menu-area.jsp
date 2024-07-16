@@ -1,8 +1,4 @@
-<%-- 
-    Document   : mobile-menu-area
-    Created on : Jun 25, 2024, 11:31:36 PM
-    Author     : DELL
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="mobile-menu-area d-lg-none d-block fix">
@@ -47,7 +43,7 @@
                                     <li><a href="shop.html">Jackets</a></li>
                                 </ul>
                             </li>
-                            <li><a href="product-details.html">Audio Clothes</a>
+                            <li><a href="product-details.html">Audio books</a>
                                 <ul>
                                     <li><a href="shop.html">Tops & Tees</a></li>
                                     <li><a href="shop.html">Sweaters</a></li>
@@ -67,7 +63,7 @@
                                     <li><a href="shop.html">Hoodies</a></li>
                                 </ul>
                             </li>
-                            <li><a href="product-details.html">children’s Clothes</a>
+                            <li><a href="product-details.html">children’s books</a>
                                 <ul>
                                     <li><a href="shop.html">Shirts</a></li>
                                     <li><a href="shop.html">Florals</a></li>

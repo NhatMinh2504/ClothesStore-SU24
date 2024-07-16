@@ -7,8 +7,6 @@ package controller.admin;
 
 import dal.dal.implement.CategoryDAO;
 import dal.dal.implement.ProductDAO;
-
-
 import entity.Product;
 import java.io.File;
 import java.io.IOException;
@@ -36,14 +34,14 @@ public class ProductAdminServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //set enconding UTF-8
+        // set enconding UTF-8
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 
-        //get session
+        // get session
         HttpSession session = request.getSession();
-        //get action
+        // get action
         String action = request.getParameter("action") == null
                 ? ""
                 : request.getParameter("action");
@@ -51,8 +49,9 @@ public class ProductAdminServlet extends HttpServlet {
             case "add":
                 addProduct(request);
                 break;
-            case "delete"   :
+            case "delete":
                 deleteProduct(request);
+                break;
             case "edit":
                 editProduct(request);
             default:
@@ -63,18 +62,18 @@ public class ProductAdminServlet extends HttpServlet {
 
     private void addProduct(HttpServletRequest request) {
         try {
-            //get name
+            // get name
             String name = request.getParameter("name");
-            //get price
+            // get price
             int price = Integer.parseInt(request.getParameter("price"));
-            //get quantity
+            // get quantity
             int quantity = Integer.parseInt(request.getParameter("quantity"));
-            //get description
+            // get description
             String description = request.getParameter("description");
-            //get category Id
+            // get category Id
             int categoryId = Integer.parseInt(request.getParameter("category"));
 
-            //image
+            // image
             Part part = request.getPart("image");
             String imagePath = null;
             if (part.getSubmittedFileName() == null
@@ -82,18 +81,18 @@ public class ProductAdminServlet extends HttpServlet {
                     || part == null) {
                 imagePath = null;
             } else {
-                //duong dan luu anh
+                // duong dan luu anh
                 String path = request.getServletContext().getRealPath("/images");
                 File dir = new File(path);
-                //xem duongd an nay ton tai chua
+                // xem duongd an nay ton tai chua
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
 
                 File image = new File(dir, part.getSubmittedFileName());
-                //ghi file vao trong duong dan
+                // ghi file vao trong duong dan
                 part.write(image.getAbsolutePath());
-                //lay ra cai context path cua project
+                // lay ra cai context path cua project
                 imagePath = request.getContextPath() + "/images/" + image.getName();
             }
 
@@ -112,8 +111,8 @@ public class ProductAdminServlet extends HttpServlet {
     }
 
     private void deleteProduct(HttpServletRequest request) {
-        //get id
-        int id=Integer.parseInt(request.getParameter("id"));
+        // get id
+        int id = Integer.parseInt(request.getParameter("id"));
         pdao.deleteById(id);
     }
 
@@ -126,7 +125,7 @@ public class ProductAdminServlet extends HttpServlet {
             int quantity = Integer.parseInt(request.getParameter("quantity"));
             String description = request.getParameter("description");
             int categoryId = Integer.parseInt(request.getParameter("category"));
-            
+
             // image
             Part part = request.getPart("image");
             String imagePath = null;
@@ -149,7 +148,7 @@ public class ProductAdminServlet extends HttpServlet {
                 // lay ra cai context path cua project
                 imagePath = request.getContextPath() + "/images/" + image.getName();
             }
-            
+
             Product product = Product.builder()
                                 .id(id)
                                 .name(name)
@@ -164,7 +163,4 @@ public class ProductAdminServlet extends HttpServlet {
             ex.printStackTrace();
         } 
     }
-    }
-
-
-
+}

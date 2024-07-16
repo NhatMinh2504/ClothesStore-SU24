@@ -45,20 +45,20 @@
         <!-- Add your site or application content here -->
         <header>
             <!-- header-top-area-start -->
-            <jsp:include page="../common/homePage/header-top-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/header-top-area.jsp"></jsp:include>
                 <!-- header-top-area-end -->
                 <!-- header-mid-area-start -->
-            <jsp:include page="../common/homePage/header-mid-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/header-mid-area.jsp"></jsp:include>
                 <!-- header-mid-area-end -->
                 <!-- main-menu-area-start -->
-            <jsp:include page="../common/homePage/main-menu-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/main-menu-area.jsp"></jsp:include>
                 <!-- main-menu-area-end -->
                 <!-- mobile-menu-area-start -->
-            <jsp:include page="../common/homePage/mobile-menu-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/mobile-menu-area.jsp"></jsp:include>
                 <!-- mobile-menu-area-end -->
         </header>
             <!-- breadcrumbs-area-start -->
-            <jsp:include page="../common/homePage/breadcrumbs-area.jsp"></jsp:include>
+            <jsp:include page="../common/homepage/breadcrumbs.jsp"></jsp:include>
             <!-- breadcrumbs-area-end -->
         <!-- product-main-area-start -->
         <div class="product-main-area mb-70">
@@ -97,11 +97,12 @@
                                             </div>
                                         </div>
                                         <div class="product-add-form">
-                                            <form action="#">
+                                            <form action="payment?action=add-product" method="POST">
+                                                <input type="hidden" name="id" value="${product.id}"/>
                                                 <div class="quality-button">
-                                                    <input class="qty" type="number" value="1">
+                                                    <input class="qty" type="number" name="quantity" value="1">
                                                 </div>
-                                                <a href="#">Add to cart</a>
+                                                <a href="#" onclick="return this.closest('form').submit();">Add to cart</a>
                                             </form>
                                         </div>
                                         <div class="product-social-links">
@@ -506,7 +507,7 @@
         </div>
         <!-- product-main-area-end -->
         <!-- footer-area-start -->
-        <jsp:include page="../common/homePage/footer.jsp"></jsp:include>
+        <jsp:include page="../common/homepage/footer.jsp"></jsp:include>
         <!-- footer-area-end -->
         <!-- Modal -->
         <div class="modal fade" id="productModal" tabindex="-1" role="dialog">

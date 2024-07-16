@@ -5,7 +5,6 @@
 
 package controller.homepage;
 
-
 import dal.dal.implement.ProductDAO;
 import entity.Product;
 import java.io.IOException;

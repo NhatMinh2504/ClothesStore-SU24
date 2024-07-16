@@ -1,11 +1,10 @@
 <%-- 
     Document   : footer
-    Created on : Jun 25, 2024, 11:35:08 PM
+    Created on : Jul 6, 2024, 3:35:13 PM
     Author     : DELL
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <footer>
     <!-- footer-top-start -->
     <div class="footer-top">

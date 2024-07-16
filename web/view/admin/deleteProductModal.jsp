@@ -1,7 +1,5 @@
 <%-- 
-    Document   : deleteProductModal
-    Created on : Jul 4, 2024, 8:44:28 PM
-    Author     : DELL
+    Author     : 4USER-FPT
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
